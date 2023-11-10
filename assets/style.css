@@ -1,0 +1,35 @@
+#forecast {
+    position: absolute;
+    left: -3%;
+}
+
+h1 {
+    margin-bottom: 0%;
+    background-image: linear-gradient(to left, rgb(255, 193, 8), rgb(78, 236, 125) , rgb(0, 123, 255));
+}
+
+
+  #search-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+ 
+  input[type="text"] {
+    flex-grow: 0.5;
+    margin-right: 1px;
+  }
+  
+#clear-history{
+    border: none;
+    outline: none;
+}
+.forecast-container {
+    margin-left: 75px;
+  }
+  .history {
+    cursor: pointer;
+  }
