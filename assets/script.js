@@ -50,5 +50,26 @@ $(document).ready(function () {
       showError("Please enter a valid city.");
       return;
     }
+    $.ajax({
+        method: "GET",
+          url: "https://api.openweathermap.org/data/2.5/weather?q=" + searchTerm + "&appid=" + apiKey,
+    
+    
+        }).then(function (data) {
+          $("#today").empty();
+    
+          var title = $("<h3>").addClass("card-title").text(data.name + " (" + new Date().toLocaleDateString() + ")");
+          var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
+          var card = $("<div>").addClass("card");
+          var cardBody = $("<div>").addClass("card-body");
+          var humid = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + " %");
+          var temp = $("<p>").addClass("card-text").text("Temperature: " + data.main.temp + " K");
+          var wind = $("<p>").addClass("card-text").text("Wind Speed: " + data.wind.speed + " MPH");
+          title.append(img);
+          cardBody.append(title, temp, humid, wind);
+          card.append(cardBody);
+          $("#today").append(card);
+          console.log(data);
+        });
 }
 });
