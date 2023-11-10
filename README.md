@@ -10,4 +10,4 @@ The Weather Dashboard allows users to search for specific cities and return curr
 
 ## Screenshot:
 ### Figure 1. Screenshot
-![](./assets/weatherdashboard.JPG) 
+![image](assets/weatherdashboard.JPG) 
