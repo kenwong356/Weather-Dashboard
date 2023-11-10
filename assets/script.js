@@ -35,4 +35,20 @@ $(document).ready(function () {
             historyList.append(listItem);
       }
   }
+
+
+  function showError(message) {
+    var errorMessage = $("<div>").addClass("alert alert-danger").text(message);
+    $(".error-message").empty().append(errorMessage);
+    setTimeout(function () {
+      $(".error-message").empty();
+    }, 1000); 
+  }
+
+  function weatherFunction(searchTerm) {
+    if (!searchTerm) {
+      showError("Please enter a valid city.");
+      return;
+    }
+}
 });
